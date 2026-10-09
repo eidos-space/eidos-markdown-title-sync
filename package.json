@@ -1,0 +1,12 @@
+{
+  "name": "eidos-markdown-title-sync",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@eidos.space/plugin-sdk": "0.6.0"
+  }
+}

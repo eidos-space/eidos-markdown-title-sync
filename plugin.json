@@ -1,0 +1,36 @@
+{
+  "apiVersion": 1,
+  "id": "eidos.markdown-title-sync",
+  "name": "Markdown Title Sync",
+  "version": "0.1.0",
+  "requires": { "pluginApi": "3.3.0" },
+  "extension": "./src/extension.ts",
+  "hooks": [
+    {
+      "id": "title-saved",
+      "title": "Update filename from title",
+      "event": "document.saved",
+      "extensions": [".md", ".markdown"],
+      "access": "write"
+    },
+    {
+      "id": "file-renamed",
+      "title": "Update title from filename",
+      "event": "file.renamed",
+      "extensions": [".md", ".markdown"],
+      "access": "write"
+    }
+  ],
+  "settings": {
+    "update-filename": {
+      "type": "boolean",
+      "title": "Update filename when the title changes",
+      "default": true
+    },
+    "update-title": {
+      "type": "boolean",
+      "title": "Update title when the filename changes",
+      "default": true
+    }
+  }
+}
