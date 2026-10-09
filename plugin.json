@@ -2,6 +2,7 @@
   "apiVersion": 1,
   "id": "eidos.markdown-title-sync",
   "name": "Markdown Title Sync",
+  "description": "Keep Markdown filenames and existing leading H1 headings in sync when you save a title change or rename a file.",
   "version": "0.1.0",
   "requires": { "pluginApi": "3.3.0" },
   "extension": "./src/extension.ts",
