@@ -1,6 +1,6 @@
 # Markdown Title Sync
 
-An optional Eidos plugin for Markdown filename and title synchronization. Requires plugin API **3.3.0** in Eidos Lite, Android or iOS.
+An optional Eidos plugin for Markdown filename and title synchronization. Requires plugin API **3.3.0**: Eidos Lite **0.23.0**, Android **0.2.0**, or a compatible iOS build.
 
 Install the `.eidos-plugin` archive from the plugin manager and enable it for the current Space on each device. Two settings control title → filename and filename → title independently; both are enabled by default.
 
@@ -16,12 +16,13 @@ This plugin has no filesystem, network, SQLite, or workspace permissions. It rec
 
 ## Development
 
-Until plugin API 3.3 is released, use the tools from the matching Eidos source checkout:
+Install the published SDK and tools, then validate and package the plugin:
 
 ```sh
-node /path/to/eidos/packages/plugin-tools/bin/eidos-plugin.mjs check .
-node /path/to/eidos/packages/plugin-tools/bin/eidos-plugin.mjs pack .
-node --experimental-strip-types --test test/*.test.ts
+pnpm install
+pnpm check
+pnpm test
+pnpm run pack
 ```
 
 For the archive test, build `cargo build -p eidos-runtime-host --example file-hook-check --locked` in that checkout, then run `EIDOS_HOOK_CHECK=/path/to/eidos/target/debug/examples/file-hook-check node --test test/*.test.mjs` here. This checks the actual packaged plugin in the same isolated VM used by Android and iOS.
