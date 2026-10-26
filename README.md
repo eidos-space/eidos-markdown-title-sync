@@ -1,6 +1,6 @@
 # Markdown Title Sync
 
-An optional Eidos plugin for Markdown filename and title synchronization. Requires plugin API **3.3.0**: Eidos Lite **0.23.0**, Android **0.2.0**, or a compatible iOS build.
+Keep Markdown filenames and existing leading H1 headings in sync. This internationalized archive requires Eidos Lite 0.29.0 and Plugin API 3.7.0. Current mobile hosts cannot install it; existing older installations remain usable.
 
 Install the `.eidos-plugin` archive from the plugin manager and enable it for the current Space on each device. Two settings control title → filename and filename → title independently; both are enabled by default.
 

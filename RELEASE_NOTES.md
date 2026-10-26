@@ -1,7 +1,8 @@
-## Markdown Title Sync 0.1.0
+## What's new
 
-Keep Markdown filenames and existing leading H1 headings in sync when saving a title change or renaming a file. Each direction can be enabled separately in the plugin settings.
+- Add English and Simplified Chinese plugin names, descriptions and bundled documentation, selected using the host language.
+- Translate plugin controls and messages using the host's language API. User content, file paths and stored configuration values retain their original values.
 
-The plugin supports ATX and Setext H1 headings, including documents with frontmatter. Documents without a leading H1 are left unchanged. Existing files are never overwritten, and changes received through cloud or local network sync do not trigger title updates.
+## Requirements
 
-Requires plugin API 3.3.0, available in Eidos Lite 0.23.0 and Android 0.2.0. This plugin is optional and can be enabled per Space.
+Requires Eidos Lite 0.29.0 or later with Plugin API 3.7.0. This archive is not supported by CLI Serve. Current Android and iOS hosts do not support this archive; existing older installations remain usable.
