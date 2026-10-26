@@ -1,37 +1,56 @@
 {
   "apiVersion": 1,
   "id": "eidos.markdown-title-sync",
-  "name": "Markdown Title Sync",
-  "description": "Keep Markdown filenames and existing leading H1 headings in sync when you save a title change or rename a file.",
-  "version": "0.1.0",
-  "requires": { "pluginApi": "3.3.0" },
+  "name": "%plugin.name%",
+  "description": "%plugin.description%",
+  "version": "0.2.0",
+  "requires": {
+    "pluginApi": "3.7.0"
+  },
   "extension": "./src/extension.ts",
   "hooks": [
     {
       "id": "title-saved",
-      "title": "Update filename from title",
+      "title": "%hooks.title-saved.title%",
       "event": "document.saved",
-      "extensions": [".md", ".markdown"],
+      "extensions": [
+        ".md",
+        ".markdown"
+      ],
       "access": "write"
     },
     {
       "id": "file-renamed",
-      "title": "Update title from filename",
+      "title": "%hooks.file-renamed.title%",
       "event": "file.renamed",
-      "extensions": [".md", ".markdown"],
+      "extensions": [
+        ".md",
+        ".markdown"
+      ],
       "access": "write"
     }
   ],
   "settings": {
     "update-filename": {
       "type": "boolean",
-      "title": "Update filename when the title changes",
+      "title": "%settings.update-filename.title%",
       "default": true
     },
     "update-title": {
       "type": "boolean",
-      "title": "Update title when the filename changes",
+      "title": "%settings.update-title.title%",
       "default": true
+    }
+  },
+  "i18n": {
+    "defaultLocale": "en",
+    "messages": {
+      "en": "./locales/en.json",
+      "zh-CN": "./locales/zh-CN.json"
+    },
+    "readme": {
+      "en": "./README.md",
+      "zh-CN": "./README.zh-CN.md"
     }
   }
 }

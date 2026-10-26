@@ -1,0 +1,8 @@
+{
+  "plugin.name": "Markdown Title Sync",
+  "plugin.description": "Keep Markdown filenames and existing leading H1 headings in sync when saving or renaming files.",
+  "hooks.title-saved.title": "Update filename from title",
+  "hooks.file-renamed.title": "Update title from filename",
+  "settings.update-filename.title": "Update filename when the title changes",
+  "settings.update-title.title": "Update title when the filename changes"
+}

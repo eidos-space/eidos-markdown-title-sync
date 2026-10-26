@@ -1,0 +1,8 @@
+{
+  "plugin.name": "Markdown 标题同步",
+  "plugin.description": "保存或重命名 Markdown 文件时，同步文件名与已有的一级标题。",
+  "hooks.title-saved.title": "根据标题更新文件名",
+  "hooks.file-renamed.title": "根据文件名更新标题",
+  "settings.update-filename.title": "标题变化时更新文件名",
+  "settings.update-title.title": "文件名变化时更新标题"
+}
